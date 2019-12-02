@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DASHBOARD</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 48px;
+        }
+
+        ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40%;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li p {
+            display: inline-block;
+            margin-left: 30px;
+            width: 40%;
+            font-size: 28px;
+        }
+
+    #button {
+        background-color: #4285f4;
+        border-radius: 2px;
+        border: none;
+        color: #ffffff;
+        text-align: center;
+        font-size: 20px;
+        padding: 9px;
+        width: 141px;
+        transition: all 0.2s;
+        cursor: pointer;
+        display: table;
+        margin: 40px auto;
+        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    #button:hover {
+        background-color: #679df6;
+    }
+
+    </style>
+</head>
+
+<body>
+    <h1>Mission Control</h1>
+
+    <ul>
+        <li>
+            <p>Count:</p>
+            <p data-editable id="countTxt">00</p>
+        </li>
+        <li>
+            <p>Delay:</p>
+            <p data-editable id="delayTxt">00</p>
+        </li>
+        <li>
+                <p>Current count:</p>
+                <p id="userCountTxt">00</p>
+            </li>
+        <li>
+            <div id="button">
+                Reset
+            </div>
+        </li>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+
+    <script src="dashBoard.js"></script>
+</body>
+
+</html>

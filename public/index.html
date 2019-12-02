@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROTOTYPE</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        #button {
+            color: white;
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            user-select: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            font-family: roboto;
+        }
+
+        #txt {
+            color: white;
+            display: none;
+            user-select: none;
+            font-size: 32px;
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body bgcolor="#000" onclick="flashScreen()">
+    <div id="button">
+        Click me
+    </div>
+    <p id="txt">Finished</p>
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
